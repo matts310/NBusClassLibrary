@@ -58,5 +58,12 @@ namespace NBusClassLibrary
             simpleRoutes = new Dictionary<string, SimpleRoute>();
         }
 
+         public static Agency deserialize(String input) 
+        {
+            XElement root = XElement.Parse(input);
+            Agency toRet = new Agency(root);
+            return toRet;
+        }
+
     }
 }

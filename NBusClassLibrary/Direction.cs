@@ -14,5 +14,11 @@ namespace NBusClassLibrary
         {
 
         }
+        public static Direction deserialize(String input)
+        {
+            XElement root = XElement.Parse(input);
+            Direction toRet = new Direction(root);
+            return toRet;
+        }
     }
 }

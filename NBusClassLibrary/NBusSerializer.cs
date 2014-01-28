@@ -15,9 +15,12 @@ namespace NBusClassLibrary
             return component.root.ToString();
         }
 
+        /*
         public static NBusComponent deserialize(String input, Type NBusComponentType) 
         {
-            return (NBusComponent)Activator.CreateInstance(NBusComponentType, XElement.Parse(input));
-        }
+            XElement root = XElement.Parse(input);
+            NBusComponent toRet = (NBusComponent)Activator.CreateInstance(typeof(Agency),root);
+            return toRet;
+        }*/
     }
 }

@@ -15,6 +15,13 @@ namespace NBusClassLibrary
 
         }
 
+        public static Stop deserialize(String input)
+        {
+            XElement root = XElement.Parse(input);
+            Stop toRet = new Stop(root);
+            return toRet;
+        }
+
         /// <summary>
         /// Retrieves a list of predictions for the current stop
         /// </summary>

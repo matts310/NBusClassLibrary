@@ -20,6 +20,13 @@ namespace NBusClassLibrary
             //this.serializer = new SimpleRouteSerializer(this);
         }
 
+        public static SimpleRoute deserialize(String input)
+        {
+            XElement root = XElement.Parse(input);
+            SimpleRoute toRet = new SimpleRoute(root);
+            return toRet;
+        }
+
         /*
         
         private class SimpleRouteSerializer : NBusSerializer 

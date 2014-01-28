@@ -120,5 +120,12 @@ namespace NBusClassLibrary
             }
             return toRet;
         }
+
+        public static Route deserialize(String input)
+        {
+            XElement root = XElement.Parse(input);
+            Route toRet = new Route(root);
+            return toRet;
+        }
     }
 }
