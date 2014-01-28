@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
+using System.IO;
 
 namespace NBusClassLibrary
 {
@@ -73,11 +74,12 @@ namespace NBusClassLibrary
             }
         }
 
-        protected XElement root;
-
+        internal XElement root;
 
         internal NBusComponent(XElement rootIn)
         {
+            var a = rootIn.CreateReader();
+           
             this.root = rootIn;
             this.fieldMap = new Dictionary<string, string>();
             defineFieldMap();

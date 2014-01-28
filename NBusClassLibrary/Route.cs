@@ -72,7 +72,7 @@ namespace NBusClassLibrary
         public Route(XElement root)
             : base(root)
         {
-            directions = getDirections();//
+            directions = getDirections();
             stops = getStops();
             directedStops = composeDirectedStops();
         }
