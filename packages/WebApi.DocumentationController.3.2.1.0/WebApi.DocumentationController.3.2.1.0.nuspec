@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>WebApi.DocumentationController</id>
+    <version>3.2.1.0</version>
+    <title>WebApi Documentation Page Generator</title>
+    <authors>Ove Andersen</authors>
+    <owners>Ove Andersen</owners>
+    <projectUrl>http://www.eyecatch.no/projects/aspnet-webapi-documentation-pages-generator/</projectUrl>
+    <iconUrl>http://www.eyecatch.no/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Controller for automatically generating documentation / help pages for your ASP.NET Web API.</description>
+    <summary>Controller for automatically generating documentation / help pages for your ASP.NET Web API.
+
+			Features:
+			* Full support for the AttributeRouting library
+			* Automatic (but configurable) generation of model diagrams
+			* Support for most documentation elements
+			- Summary
+			- Example
+			- Remarks
+			- Returns</summary>
+    <releaseNotes>Improved documentation styling.</releaseNotes>
+    <copyright>Copyright EyeCatch 2012</copyright>
+    <language />
+    <tags>webapi documentation help route attributerouting</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="jQuery" version="1.8.3" />
+        <dependency id="jQuery.UI.Combined" version="1.9.1" />
+        <dependency id="Microsoft.AspNet.Mvc" version="4.0.20710.0" />
+        <dependency id="Microsoft.AspNet.WebApi" version="4.0.20710.0" />
+        <dependency id="AttributeRouting.Core.Web" version="3.2" />
+        <dependency id="Newtonsoft.Json" version="4.5.11" />
+        <dependency id="WebActivator" version="1.5.2" />
+        <dependency id="Yuml.Net" version="1.2.0.1" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
