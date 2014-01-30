@@ -11,12 +11,21 @@ namespace NBusClassLibrary
     {
         private static string url = "http://webservices.nextbus.com/service/publicXMLFeed?command=";
         
-        internal static XDocument getXml(string cmd)
+        //Can throw WebException
+        internal static XDocument getXml(string cmd) 
         {
-            XDocument toRet = XDocument.Load(url + cmd);
-            
-            //add in error handling here
+            XDocument toRet = null;
+            toRet = XDocument.Load(url + cmd);
+            if (toRet.Descendants("Error").Count() != 0)
+            {
+                throw new NextBusAPIException(toRet.Descendants("Error").First().Value);
+            }
             return toRet;
+        }
+
+        public class NextBusAPIException : Exception
+        {
+            public NextBusAPIException(String message) : base(message) { }
         }
 
         internal static string agencyList()
