@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using System.Xml.Linq;
 namespace NBusClassLibrary
 {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-    public class Route : NBusComponent
+    public class Route : NBusComponent 
     {
         private Dictionary<string, Direction> directions;
         private Dictionary<string, Stop> stops;

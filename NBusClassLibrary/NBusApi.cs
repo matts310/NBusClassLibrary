@@ -10,7 +10,7 @@ namespace NBusClassLibrary
     public static class NBusApi
     {
         private static string url = "http://webservices.nextbus.com/service/publicXMLFeed?command=";
-        
+
         //Can throw WebException
         internal static XDocument getXml(string cmd) 
         {
